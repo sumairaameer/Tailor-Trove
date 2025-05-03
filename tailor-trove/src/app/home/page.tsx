@@ -1,20 +1,3 @@
-
-
-// 'use client';
-
-// export default function WelcomeSection() {
-//   return (
-//     <section className="bg-yellow-50 py-20 text-center">
-//       <h1 className="text-5xl font-extrabold text-yellow-700 mb-4 drop-shadow-md">
-//         Welcome to <span className="text-gray-800">Tailor Trove</span>
-//       </h1>
-//       <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
-//         Elevating your wardrobe with custom-fitted elegance — designed just for you, stitched with perfection.
-//       </p>
-//     </section>
-//   );
-// }
-
 // src/app/page.tsx
 import React from 'react'
 

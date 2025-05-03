@@ -33,8 +33,8 @@ export default function Header() {
         <div className="font-semibold">Call us: +92-300-1234567</div>
       </div>
 
-      {/* Header */}
-      <header className="bg-gray-800 text-white">
+      {/* Header (Sticky) */}
+      <header className="bg-gray-800 text-white sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
           <div className="text-xl font-bold">
