@@ -1,27 +1,32 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function ServicesPage() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // This will be triggered only on the client-side
+  }, []);
+
   const services = [
-    { title: "Shalwar Kameez Stitching", image: "/images/shlwar kameez.jpeg" },
+    { title: "Shalwar Kameez Stitching", image: "/images/shalwar.jpg" },
     { title: "Maxi Dress Stitching", image: "/images/maxi dress.jpeg" },
-    { title: "Lehenga Choli Stitching", image: "/images/red-bridal.jpg" },
-    { title: "Kurtis Stitching", image: "/images/evening-wear.jpg" },
-    { title: "Gharara and Sharara Stitching", image: "/images/casual-wear.jpg" },
-    { title: "Bridal Dress Stitching", image: "/images/sportswear.jpg" },
-    { title: "Saree Blouse Stitching", image: "/images/formal-wear.jpg" },
-    { title: "Frock Stitching", image: "/images/festive-collection.jpg" },
-    { title: "Skirt and Top Stitching", image: "/images/abaya-stitching.jpg" },
-    { title: "Patiala Suit Stitching", image: "/images/partywear-stitching.jpg" },
-    { title: "Anghrakha Style Stitching", image: "/images/formal-suit.jpg" },
-    { title: "Gown Stitching", image: "/images/double-suit.jpg" },
-    { title: "Abaya Stitching", image: "/images/abaya-stitching.jpg" },
-    { title: "Party Wear Stitching", image: "/images/partywear-stitching.jpg" },
-    { title: "Formal Suit Stitching", image: "/images/formal-suit.jpg" },
-    { title: "Double Suit Stitching", image: "/images/double-suit.jpg" },
+    { title: "Lehenga Choli Stitching", image: "/images/choli kurti.jpg" },
+    { title: "Kurtis Stitching", image: "/images/kurtis.jpg" },
+    { title: "Gharara and Sharara Stitching", image: "/images/sharara.jpg" },
+    { title: "Bridal Dress Stitching", image: "/images/bridal dress.jpg" },
+    { title: "Saree Blouse Stitching", image: "/images/saree.jpg" },
+    { title: "Frock Stitching", image: "/images/frock.jpg" },
+    { title: "Skirt and Top Stitching", image: "/images/skirt and top.jpg" },
+    { title: "Patiala Suit Stitching", image: "/images/patila suit.jpg" },
+    { title: "Anghrakha Style Stitching", image: "/images/anghkraka.jpg" },
+    { title: "Gown Stitching", image: "/images/gown.jpg" },
   ];
+
+  if (!isClient) return null; // Don't render anything on the server side
 
   return (
     <div className="bg-black min-h-screen text-white py-10 px-4">
